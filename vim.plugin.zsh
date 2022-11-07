@@ -2,6 +2,8 @@
 bindkey -v
 export KEYTIMEOUT=1
 
+zmodload -i zsh/complist
+
 # Use vim keys in tab complete menu:
 bindkey -M menuselect '^h' vi-backward-char
 bindkey -M menuselect '^k' vi-up-line-or-history
