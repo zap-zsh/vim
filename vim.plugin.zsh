@@ -34,4 +34,6 @@ bindkey -M viins '^A' beginning-of-line
 bindkey -M viins '^E' end-of-line 
 
 # escape back into normal mode
-[[ -n "${VI_MODE_ESC_INSERT}" ]] && bindkey -M viins "${VI_MODE_ESC_INSERT}" vi-cmd-mode
+if [[ -n "${VI_MODE_ESC_INSERT}" ]] then
+    bindkey -M viins "${VI_MODE_ESC_INSERT}" vi-cmd-mode
+fi
