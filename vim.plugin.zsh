@@ -1,6 +1,6 @@
 #!/bin/sh
 bindkey -v
-export KEYTIMEOUT=1
+export KEYTIMEOUT=25
 
 if [[ -o menucomplete ]]; then 
   # Use vim keys in tab complete menu:
@@ -32,3 +32,6 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 # emacs like keybindings
 bindkey -M viins '^A' beginning-of-line 
 bindkey -M viins '^E' end-of-line 
+
+# escape back into normal mode
+[[ -n "${VI_MODE_ESC_INSERT}" ]] && bindkey -M viins "${VI_MODE_ESC_INSERT}" vi-cmd-mode
