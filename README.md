@@ -8,7 +8,7 @@ A common habit of vim users is to re-map a key sequence to`<Esc>` in insert mode
 
 ```bash
 
-export VI_MODE_ESC_INSERT="jk"
+export VI_MODE_ESC_INSERT="jk" && plug "zap-zsh/vim"
 ```
 
-will escape back into normal mode upon pressing `jk`.
+will escape back into normal mode upon pressing `jk`. 
