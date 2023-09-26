@@ -55,3 +55,7 @@ bindkey -M vicmd cs change-surround
 bindkey -M vicmd ds delete-surround
 bindkey -M vicmd ys add-surround
 bindkey -M visual S add-surround
+# escape back into normal mode
+if [[ -n "${VI_MODE_ESC_INSERT}" ]] then
+    bindkey -M viins "${VI_MODE_ESC_INSERT}" vi-cmd-mode
+fi
