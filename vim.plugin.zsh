@@ -1,6 +1,6 @@
 #!/bin/sh
 bindkey -v
-export KEYTIMEOUT=25
+export KEYTIMEOUT=1
 
 if [[ -o menucomplete ]]; then 
   # Use vim keys in tab complete menu:
